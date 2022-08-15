@@ -5,37 +5,14 @@ https://www.linkedin.com/in/yichenwang1114/
 
 # Table of Content <br>
 ## Topics:
-1. [MySql dbms](###MySQL-dbms:)
-2. R-Programming<br> 
-3. Python<br> 
-4. Excel<br>
+1. [MySQL dbms](#mysql-dbms)
+2. [R Programming](#r-programming)
+3. [Python](#python)
+4. [Excel](#excel)
 
-a<br>
-a<br>
-a<br>
-
-vv
-a<br>
-a<br>
-a<br>
-a<br>
-a<br>
-a<br>
-a<br>
-a<br>
-a<br>
-a<br>
-a<br>
-a<br>
-a<br>
-a<br>a<br>a<br>
-va<br>
-
-a<br>
-a<br>
-va<br>
-
-### MySQL dbms:
+# MySQL dbms
 #### 1. Bumble Database Simulation
 
-
+# R Programming
+# Python
+# Excel

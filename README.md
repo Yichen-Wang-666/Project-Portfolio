@@ -10,9 +10,9 @@ https://www.linkedin.com/in/yichenwang1114/
 3. [Python](#python)
 4. [Excel](#excel)
 
-# MySQL dbms
-#### 1. Bumble Database Simulation
+### MySQL dbms
+#### 1. [Bumble Database Simulation](https://github.com/Yichen-Wang-666/MySQL-dbms/tree/main/Bumble%20Database%20Simulation)
 
-# R Programming
-# Python
-# Excel
+### R Programming
+### Python
+### Excel

@@ -53,9 +53,21 @@ browsing record are also noteworthy attributes that Artea can include in their t
   
 #### 3. Does demographics data influence the recommendation?
 <img src="https://user-images.githubusercontent.com/59845928/184966151-c98f1684-1498-44fa-baad-b01471319acc.png" width="600" height="200"><br>
-For the Artea case, after the comparison from the** ANOVA test**, we find that combining both gender and minority into our recommendation strategy has **the lowest AIC score**, which means both will influence our expected outcome and we should not ignore either of them.
+For the Artea case, after the comparison from the **ANOVA test**, we find that combining both gender and minority into our recommendation strategy has **the lowest AIC score**, which means both will influence our expected outcome and we should not ignore either of them.
 
 ### 2. [Facebook Analysis](https://github.com/Yichen-Wang-666/R-Programming-Projects/tree/main/Facebook%20Analysis)
+#### Purpose of analyzing social media content engagement:<br>
+Most common marketing problem for brands can be targeting and attracting the wrong customer. By analyzing the engagement with social media contents, brands can increase the accuracy of conveying the market information and can improve the marketing strategy. And for those people who show interest on social media but are not ready to purchase, by analyzing the hints on social media engagement, companies can also adjust their strategy and solve the pain points.
+
+#### Methodology<br>
+1. To find out which predictors are mroe reliable at predicting engagement with digital content, a linear regression model is constructed. Instead of using the total interactions as the target variable, we use the sum of **the number of shares**, **likes** and **comments** because it is more representative. By setting up a threshold of feature importance > 0.01, 13 predictors are filtered as shown below: <br>
+<img src="https://user-images.githubusercontent.com/59845928/185002159-8e1bdc55-fe3d-4233-b54f-6c9096970d8d.png" width="400" height="500"><br>
+2. To find out whether engagement mostly a function of factors extrinsic to the post (who posted it/ when they did it), or mostly due to intrinsic factors (languages it uses), feature importances are examined. Although the top 3 factors can be grouped into a function of extrinsic factors, the remaining ones are more intrinsic, meaning when people see a post, they will firstly pay attention to who posts it and the time when it post (extrinsic), if the person they are interested or familiar with, then they will take a good look at the details of the post (intrinsic)<br>
+
+We also have analyzed the coefficients of each predictor to understand how they affect the overall interaction. Here we only analyze predictors with high significance. For example, posts with live videos have positive coefficients, indicating more interactions with users. This explains the increasing popularity of live streaming as users feel more involved.<br>
+<img src="https://user-images.githubusercontent.com/59845928/185003680-d3308540-4c09-4b88-80c2-0bf428ad4d1b.png" width="400" height="500"><br>
+
+### 3. [Heart Disease Prediction](https://github.com/Yichen-Wang-666/R-Programming-Projects/tree/main/Heart%20Disease%20Prediction)
 
 
 

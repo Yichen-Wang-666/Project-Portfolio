@@ -38,6 +38,8 @@ _Example Query:_<br>
 <img src= "https://user-images.githubusercontent.com/59845928/184719095-910394fc-acdd-4b9d-8dbf-504fa56f0b6d.png" width="600" height="400"><br>
 <img src= "https://user-images.githubusercontent.com/59845928/184719249-1a448936-7b65-4bd4-9ec5-85486421bf6f.png" width="600" height="360"><br>
 
-### R Programming
+### [R Programming](https://github.com/Yichen-Wang-666/R-Programming-Projects)
+### 1. [Artea Case Analysis](https://github.com/Yichen-Wang-666/R-Programming-Projects/tree/main/Artea%20Case%20Analysis)
+
 ### Python
 ### Excel

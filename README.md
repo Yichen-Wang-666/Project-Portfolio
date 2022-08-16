@@ -40,6 +40,24 @@ _Example Query:_<br>
 
 ### [R Programming](https://github.com/Yichen-Wang-666/R-Programming-Projects)
 ### 1. [Artea Case Analysis](https://github.com/Yichen-Wang-666/R-Programming-Projects/tree/main/Artea%20Case%20Analysis)
+In the Artea Case Analysis, they ran the A/B testing to test the coupon promotion strategy because the proportion of those who actually made a purchase is much lower than they expected even the engagement metrics indicate nothing wrong. By doing analysis using R, we mainly focus on several key problems:
+#### 1. Does the discount coupons work? <br>
+To examine whether the discount coupons work, we ran a **descriptive analysis** on the indicative variables, trans_after, and revenue_after, for the effectiveness of coupons and compared the result across two groups. The result is listed in the following table:
+  
+<img src="https://user-images.githubusercontent.com/59845928/184964481-c1e92247-3fb8-466d-8d9e-69d42231ce3a.png" width="600" height="100"><br>
+Based on the result above, we observed that the percentage of customers who made a ransfer after receiving coupons is 12.39% while the percentage of customers who ade a transfer without a coupon is 10.69%. The difference is not substantial. Moreover, we conducted **hypothesis testing** with the null hypothesis being: the revenue is not significantly different between two groups of customers, customers with coupons and customers without coupons. Based on the T-test, the test statistic is contained in the 95% confidence interval, thus we **cannot reject the null hypothesis**. There is no significant evidence that customers with coupons generate more revenue than customers without coupons.
+
+#### 2. Which customers should be targeted
+Considering the several models and tests we’ve performed, we think in general, Artea should focus on loyal customers and stimulating those potential customers with non-empty shopping carts to make the purchase. Besides, gender, minority, and
+browsing record are also noteworthy attributes that Artea can include in their targeting strategy based on different purposes to maximize the effect of such marketing campaigns.
+  
+#### 3. Does demographics data influence the recommendation?
+<img src="https://user-images.githubusercontent.com/59845928/184966151-c98f1684-1498-44fa-baad-b01471319acc.png" width="600" height="200"><br>
+For the Artea case, after the comparison from the** ANOVA test**, we find that combining both gender and minority into our recommendation strategy has **the lowest AIC score**, which means both will influence our expected outcome and we should not ignore either of them.
+
+### 2. [Facebook Analysis](https://github.com/Yichen-Wang-666/R-Programming-Projects/tree/main/Facebook%20Analysis)
+
+
 
 ### Python
 ### Excel

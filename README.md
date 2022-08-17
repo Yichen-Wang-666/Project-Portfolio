@@ -125,8 +125,40 @@ In the future, if given more time to work on this project, we would recommend lo
   
 ## Python
 ## [Python-Optimization](https://github.com/Yichen-Wang-666/Python-Optimization)
-### 1. [Police Patrol Route Optimization](https://github.com/Yichen-Wang-666/Python-Optimization/tree/main/Police%20Patrol%20Route%20Optimization)
+### 1. [Police Patrol Route Optimization](https://github.com/Yichen-Wang-666/Python-Optimization/tree/main/Police%20Patrol%20Route%20Optimization)<br>
+In this project, we set an eye on Toronto, a city that has demonstrated 78 homicides, 373 shootings, and 5,268 breaks and enters in 2021 till December 2nd (Toronto Crime Incidences, 2021), highlighting the necessity of police patrol for crime prevention and improving citizens’ feeling of safety. Based on a simplified simulation of the Toronto police system and public safety conditions, we built a model to minimize the budget spent on police patrolling among divisions in downtown Toronto via optimizing the patrolling routes and determining the number of police cars.
 
+#### Data Collection:<br>
+For our data source, we've assumed a complete police patrol route as a closed loop that can be broken into different line segments connected together by checkpoints. Each checkpoint represents the location of the police headquarters in each division, with Division 53 being the Central Field, shown below:<br>
+<img src="https://user-images.githubusercontent.com/59845928/185223594-d5bda931-06f1-4304-9c29-7e420584659e.png" width="800" height="300"><br>
+
+The time required to travel between each police divisions is collected using Google Map, where data is entered into a Route Time Matrix, shown below. We also acquired data on the per-hour utilization cost of a police patrolling vehicle, which we found to be 37.38 CAD/hour for Toronto.<br>
+<img src="https://user-images.githubusercontent.com/59845928/185224312-8099b790-06a5-4a86-9acc-d43cf1a37c2d.png" width="800" height="150"><br>
+
+#### Optimization Model (Gurobi Formulation)<br>
+- Import Gurobipy, Pandas and relevant libraries
+- Load datasets
+- Declare model (using Gurobipy.model("Model Name") functionality)
+- Create all decision variables (shown below)
+<img src="https://user-images.githubusercontent.com/59845928/185224922-0e36324e-5cbd-4079-a660-eeaea2788c83.png" width="600" height="200"><br>
+- Add Constraints (8 constraints in total, such as **subtour elimination**, **Arriving/Leaving a division**, details in report in folder)
+- Define objective functions (using model.setObjectivN()):<br>
+1. **First priority**: Minimize the total travel time, which is the sum of travel time for each police car.
+2. **Second priority**: Minimize the maximum travel time, which is the time for all police cars to complete patrol.
+3. **Third priority**: Minimize the number of police cars used.
+
+#### Solution<br>
+The optimization model will give us the number of cars used for patrolling, their individual routes and the time taken for them to
+complete those routes as well as the total cost of travel for the advised routes.<br>
+<img src="https://user-images.githubusercontent.com/59845928/185225867-3b29523b-54d6-41a4-b16b-f42dc5ed9d79.png" width="600" height="200"><br>
+<img src="https://user-images.githubusercontent.com/59845928/185226069-a065d981-6180-4970-b9b8-1285f416fc0a.png" width="500" height="300"><br>
+
+#### Problem Extension:<br>
+If police needs to patrol areas with high crime rate twice, then the model would suggest the following route, with heatmap showing the crime rate.<br>
+<img src="https://user-images.githubusercontent.com/59845928/185226483-29b8ecac-b7b2-4752-8165-bf38c1cc0559.png" width="550" height="650"><br>
+
+#### Conclusion:<br>
+In this project we have learnt how to solve a real-life problem by using concepts from Travelling Salesman Problem, incorporated with other techniques such as categorizing data by using the heatmap package from python to highlight high crime-rate regions. We have also implemented a multi-objective model, with different weights assigned to each objective function. This technique really helps our model as we need to consider many different goals to help the Toronto police design the best patrol route.
 
 ## [Python-Machine Learning](https://github.com/Yichen-Wang-666/Python-Machine-Learning)
 

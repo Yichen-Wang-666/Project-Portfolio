@@ -95,6 +95,33 @@ The main improvement is due to the boosting, as each tree grows sequentially, an
 #### Conclusion:<br>
 The conclusion could help improve the efficiency of current diagnosis of heart disease, which includes mainly three parts: first category is history check, asking about whether having heart disease history or other symptoms in the past; the second category examines the heart rate abnormality, sound of possible lung crackles, wheezing or third heart sound, while the third category will check the chest radiography.
 
+### 4. [IMDB Review Analysis](https://github.com/Yichen-Wang-666/R-Programming-Projects/tree/main/IMDB%20Review%20Analysis)
+The purpose of this project is to develop a predictive model that projects the critic rating (variable name: imdb_score) of the movie based on the IMDb (an online database for all film-related information) dataset. The dataset, with 46 predictors, contains various movie attributes such as the budget of the movie, its duration, and genre, allowing for data analysis and model building. At the completion of the project, the team will use the final model to predict the IMDb rating of 40 blockbusters with the expectation of testing the accuracy and usefulness of the model.
 
+**1. Distribution Visualization:<br>**
+<img src="https://user-images.githubusercontent.com/59845928/185045520-54674904-8368-44a2-8be8-0d1395e9a50b.png" width="450" height="500"><br>
+When we look at the distribution of total number of actors in a movie, it becomes clear that the data is heavily skewed
+to the left and there are many outliers that will have to be eliminated for us to build a good model. This helps us understand the data and identify any possible issues.
+  
+**2. Non-linearity check:<br>**
+After checking all the residual plots, we found that most of our numerical predictors (year_of_release, budget_in_millions, duration_in_hours, and total_number_of_actors) are nonlinear, and this indicates that we should adopt non-linear regression model instead of the simple linear regression to improve reliability.<br>
+<img src="https://user-images.githubusercontent.com/59845928/185045638-13a5ccde-a921-4a8b-a05c-f602191e4394.png" width="550" height="400"><br>
+
+**3. Collinearity check:<br>**
+When we consider the rule of thumb to handle the collinearity problem, it can be problematic only the absolute value of coefficients exceeds 0.8. As a result, our team concluded that the collinearity problem does not exist in the given dataset, so no further fix is required.<br>
+<img src="https://user-images.githubusercontent.com/59845928/185045722-cde4198f-b9d0-4236-b628-aa5a23616d88.png" width="500" height="500"><br>
+
+**4. Feature Selection:<br>**
+To identify irrelevant features, we utilized the Recursive Feature Elimination tactic. It works by defining ‘incremental R-squared’ per each predictor by starting with all features in the dataset and removing one predicter from the initial model by one iteration.<br>
+<img src="https://user-images.githubusercontent.com/59845928/185046106-2e7ab392-a990-400c-b3a8-224be6692f36.png" width="500" height="300"><br>
+
+**5. Model Selection:<br>**
+From the residual plots, we detected **non-linearity of 4 numerical variables** (year_of_release, budget_in_millions, duration_in_hours, and total_number_of_actors) that are all features with predictive powers as suggested by the feature selection section. Therefore, the dataset reveals the need to use polynomial regression to increase the predictive power of the model. The 4 numerical predictors are transferred into non-linear terms.
+  
+To determine the best degree for each predictor, we decided to apply **ANOVA test**. To ensure the efficiency and accuracy of the ANOVA test, 18 polynomial regression models with various degrees were constructed in order to minimize the effect brought by variable change. We first kept all predictors at degree = 1, and then increment the degree for each numerical predictor. The degrees of other numerical predictors are kept the same and these models were included in the ANOVA function. By checking the decreasing pattern in RSS while keeping our Pr(>F) smaller than 0.05, we could observe the desired degree for our polynomials.<br>
+<img src="https://user-images.githubusercontent.com/59845928/185046248-09aaecea-9021-41a7-bc2c-87703656ec3a.png" width="450" height="500"><br>
+
+In the future, if given more time to work on this project, we would recommend looking into interaction terms before predictors to determine whether the factors that make a highly scored movie successful are constant across genres. For example, does increasing duration have the same effect on the critic score for action movies that it does on comedy movies? Increasing the level of granularity using interaction terms is an interesting next step for this project.
+  
 ### Python
 ### Excel

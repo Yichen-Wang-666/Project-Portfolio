@@ -24,10 +24,10 @@ A dating app database is inspired by the functionality of Bumble, a free dating 
 
 _Example Query:_<Br>
 <img src="https://user-images.githubusercontent.com/59845928/184714056-a0774211-c522-4c97-80ed-bda4cef3c260.png" width="500" height="200"><br>
-<img src="https://user-images.githubusercontent.com/59845928/184714277-c0a2284a-3a3a-450d-b4e7-f65e8af64c5e.png" width="500" height="350">
+<img src="https://user-images.githubusercontent.com/59845928/184714277-c0a2284a-3a3a-450d-b4e7-f65e8af64c5e.png" width="500" height="350"><br>
 
 For more details, please visit Bumble Database Simulation Folder to see the report and files.
-
+  
 ### 2. [La Ronde Analysis](https://github.com/Yichen-Wang-666/MySQL-dbms/tree/main/La%20Ronde%20Analysis)
 Several datasets including the ride history, ticket, customer, facility and so on of La Ronde, one of the famous amusement part in Montreal, are provided. This project aims to create a database to store all the datasets and come up with different queries to exploit values from the massive amount of data.
 
@@ -176,8 +176,49 @@ For variables, we have D_60 representing the weekly demand at $60, where demand 
 The **objective function** is shown below:<br>
 <img src="https://user-images.githubusercontent.com/59845928/185236362-f2f1944f-3012-4c2b-86eb-2fb06f035a25.png" width="650" height="50"><br>  
 
-The Final result is shown below, indicating that at a demand of 105 at price = $60, price level at $60 should be maintained for two weeks and the remaining weeks should be maintained at the price of $54.
+The Final result is shown below, indicating that at a demand of 105 at price = $60, price level at $60 should be maintained for two weeks and the remaining weeks should be maintained at the price of $54.<br>
 <img src="https://user-images.githubusercontent.com/59845928/185236877-88a55b1d-605b-400d-b037-31a69f22cad9.png" width="350" height="200"><br>  
+
+### 3. [SVDC algae harvesting](https://github.com/Yichen-Wang-666/Python-Optimization/tree/main/SVDC%20algae%20harvesting%20optimization)<br>
+#### project description
+SVDC R&D department has a major pain point that at what level of cell density, what frequency, as well as harvest amount would result in the maximum yield. This project uses various optimization and visualization methods to deliver the optimum harvesting scheme. 
+
+#### Use Case Pain Points (pp):
+1. SVDC only has un-cleaned data recorded by sensors, which cannot be transferred into usable information.
+2. Three factors during the harvesting process (density level at harvesting, volume extracted for each harvest, and time interval between each harvest) require optimization to reach theoretically highest possible yield.
+
+#### Solution:
+**Solution for pp1**: Data preprocessing and winsorization are performed to detect and eliminate outliers in original dataset. Only data without external interference are kept for further modelling.
+
+**Solution for pp2**: Growth versus Density plot is obtained from daily record of density. This relationship simulates a piecewise function between density and time, leading to a Monte Carlo optimization of the harvesting procedure. The best combination of harvesting conditions (density level at harvesting, volume extracted for each harvest, and time interval between each harvest) are obtained from a 3d heatmap.
+
+#### General Architecture:<br>
+<img src="https://user-images.githubusercontent.com/59845928/185246043-63a57f82-4b62-48c1-8f5f-c1963bff6c84.png" width="800" height="400"><br>  
+
+#### Data Processing:<br>
+Data processing includes several procedures, such as:
+#### 1. data cleaning and plotting
+Most of the data will be removed as it is irrelavant to the analysis, all the null records have been dropped<br>
+<img src="https://user-images.githubusercontent.com/59845928/185247326-ea4e1c28-eb5f-475c-93ba-2222c8dfb9a4.png" width="800" height="170"><br>  
+
+#### 2. data selection
+![image](https://user-images.githubusercontent.com/59845928/185247686-e55936f6-7534-4f6c-86ec-174a8bd3430d.png)
+
+#### 3. growth rate calculation
+![image](https://user-images.githubusercontent.com/59845928/185247815-ccdbb00f-f19f-4c82-bb40-e705fd3cac31.png)
+
+#### 4. Simplification of the growth rate plot
+![image](https://user-images.githubusercontent.com/59845928/185247911-38cb81a7-aa56-4007-aa22-b7c2411a7fcb.png)
+
+#### 5. Final Function simulation
+![image](https://user-images.githubusercontent.com/59845928/185247947-ec7596a0-529e-4a77-90f7-67f0b624a4f2.png)
+
+#### Optimization model<br>
+![image](https://user-images.githubusercontent.com/59845928/185248443-47840c47-88b2-4bc5-b0db-63c4305521ab.png)<br>
+![image](https://user-images.githubusercontent.com/59845928/185248475-35e31646-1e76-493f-94bc-f70f26a2fd44.png)
+![image](https://user-images.githubusercontent.com/59845928/185248550-1ab3978d-b89c-4811-b032-b691c41673e6.png)
+
+
 
 
 ## [Python-Machine Learning](https://github.com/Yichen-Wang-666/Python-Machine-Learning)

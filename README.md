@@ -160,6 +160,26 @@ If police needs to patrol areas with high crime rate twice, then the model would
 #### Conclusion:<br>
 In this project we have learnt how to solve a real-life problem by using concepts from Travelling Salesman Problem, incorporated with other techniques such as categorizing data by using the heatmap package from python to highlight high crime-rate regions. We have also implemented a multi-objective model, with different weights assigned to each objective function. This technique really helps our model as we need to consider many different goals to help the Toronto police design the best patrol route.
 
+### 2. [Retail Markdown Game](https://github.com/Yichen-Wang-666/Python-Optimization/tree/main/Retail%20Markdown%20Game)<br>
+#### Introduction<br>
+In the retailer game, each round starts with 2000 items and the sales season is 15 weeks. One needs to choose their strategy during the 15 weeks sale time. One has 4 possible strategy: $60, $54, $48 and $36. Each time after the price decreases, one cannot choose to increase the price. For example, if at week 6 one changes the sale price from $60 to $54, they cannot change back to $60 anymore. The only options left are to maintain the price at $54, or decrease the price further to $48 or $36. 
+
+In this assignment, we aimed to develop a strategy to achieve a good performance in the retail markdown game under different random circumstances.
+
+#### Data Processing<br>
+To model this problem using optimization solver, we first utilized the original dataset to generalize the increment in demnad after decreasing the price. Based on the calculation, the average increments in sales when one decrease the price from $60 to several price options ($54,$48,$36) are calculated (1.306, 1.629, 2.647 respectively). These coefficients will be used for forecasting the increment in sales. <br>
+<img src="https://user-images.githubusercontent.com/59845928/185230334-1dc983ca-914d-4ae5-bc44-1ffc153f2cc9.png" width="700" height="300"><br>
+
+#### Optimization Model (Gurobi Formulation)<br>
+For variables, we have D_60 representing the weekly demand at $60, where demand at different prices can be represented with coefficients * D_60. (E.g. D_54 = 1.306*D_60). Other variables are x_60, x_54, x_48 and x_36 representing the number of weeks the item is sold at a specific price (x_60 refers to the number of weeks the item is sold at $60 and the rest are defined similarly). The lower bound is set to be 0 and the upper bound is set to 60 as it is the length of the trial.
+  
+The **objective function** is shown below:<br>
+<img src="https://user-images.githubusercontent.com/59845928/185236362-f2f1944f-3012-4c2b-86eb-2fb06f035a25.png" width="650" height="50"><br>  
+
+The Final result is shown below, indicating that at a demand of 105 at price = $60, price level at $60 should be maintained for two weeks and the remaining weeks should be maintained at the price of $54.
+<img src="https://user-images.githubusercontent.com/59845928/185236877-88a55b1d-605b-400d-b037-31a69f22cad9.png" width="350" height="200"><br>  
+
+
 ## [Python-Machine Learning](https://github.com/Yichen-Wang-666/Python-Machine-Learning)
 
 ### Excel

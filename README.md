@@ -68,7 +68,32 @@ We also have analyzed the coefficients of each predictor to understand how they 
 <img src="https://user-images.githubusercontent.com/59845928/185003680-d3308540-4c09-4b88-80c2-0bf428ad4d1b.png" width="400" height="500"><br>
 
 ### 3. [Heart Disease Prediction](https://github.com/Yichen-Wang-666/R-Programming-Projects/tree/main/Heart%20Disease%20Prediction)
+This project is aiming to predict the occurrence of the heart disease based on different clinical features such as age, sex, blood pressure and so on based on a dataset provided on Kaggle, which includes over 11 common features, making it the largest heart disease dataset available so far for research purposes.
 
+The whole process contains:
+#### 1. Data Visualization:<br>
+Data exploration is performed, using histograms of ggplot() for numerical and categorical variables.
+<img src="https://user-images.githubusercontent.com/59845928/185035578-7c80f7fd-2c57-4499-a639-05222d0fdc22.png" width="400" height="500">
+<img src="https://user-images.githubusercontent.com/59845928/185035679-2b900ea2-ab0d-4f3d-a2f1-ac1b427029ea.png" width="400" height="500"><br>
+
+#### 2. Data cleaning and feature selection:<br>
+To check relationship between each variable, a collinearity matrix is generated, as shown below:
+<img src="https://user-images.githubusercontent.com/59845928/185036953-233a176d-8709-4c69-923b-d4dc49cb3ac5.png" width="500" height="400"><br>
+According to the matrix, Sex_F and ExerciseAngina_N will be dropped to avoid collinearity problem.<br>
+
+To select the most representative predictor, feature importance is measured using random forest model, visualized using varImpPlot(), shown below:<br>
+<img src="https://user-images.githubusercontent.com/59845928/185038279-558a6a5d-fb0c-4d3e-964b-d0eb80a34f26.png" width="600" height="400"><br>
+While a 2-dimensional plot of PCA can also be used to reduce dimensions and select important features. The detailed selection process could be seen in the report. The final choice is [ChestPainType_ASY, FastingBS , ST_Slope_Flat, Oldpeak, Cholesterol, ExerciseAngina_Y].<br>
+<img src="https://user-images.githubusercontent.com/59845928/185038961-73796e7a-7682-46ed-ae51-31ce25f0cf98.png" width="600" height="400"><br>
+
+#### 3. Data modelling:<br>
+For predicting models, both regular logistic model and boosted forest model are used, with outcome table shown below:<br>
+<img src="https://user-images.githubusercontent.com/59845928/185040928-01999946-7764-4c91-9e78-f481a96ba312.png" width="350" height="200">
+<img src="https://user-images.githubusercontent.com/59845928/185040943-0a3960f0-557b-4e74-96ae-64a94196c16f.png" width="450" height="200"><br>
+The main improvement is due to the boosting, as each tree grows sequentially, and learns from the previous one. This mechanism helps to build a forest of weak predictors. However, this model may tend to be a bit overfitting over this particular dataset. But the good performance provided by both models indicates the reliability of the features chosen previously.
+
+#### Conclusion:<br>
+The conclusion could help improve the efficiency of current diagnosis of heart disease, which includes mainly three parts: first category is history check, asking about whether having heart disease history or other symptoms in the past; the second category examines the heart rate abnormality, sound of possible lung crackles, wheezing or third heart sound, while the third category will check the chest radiography.
 
 
 ### Python

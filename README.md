@@ -38,7 +38,7 @@ _Example Query:_<br>
 <img src= "https://user-images.githubusercontent.com/59845928/184719095-910394fc-acdd-4b9d-8dbf-504fa56f0b6d.png" width="600" height="400"><br>
 <img src= "https://user-images.githubusercontent.com/59845928/184719249-1a448936-7b65-4bd4-9ec5-85486421bf6f.png" width="600" height="360"><br>
 
-### [R Programming](https://github.com/Yichen-Wang-666/R-Programming-Projects)
+## [R Programming](https://github.com/Yichen-Wang-666/R-Programming-Projects)
 ### 1. [Artea Case Analysis](https://github.com/Yichen-Wang-666/R-Programming-Projects/tree/main/Artea%20Case%20Analysis)
 In the Artea Case Analysis, they ran the A/B testing to test the coupon promotion strategy because the proportion of those who actually made a purchase is much lower than they expected even the engagement metrics indicate nothing wrong. By doing analysis using R, we mainly focus on several key problems:
 #### 1. Does the discount coupons work? <br>
@@ -123,5 +123,11 @@ To determine the best degree for each predictor, we decided to apply **ANOVA tes
 
 In the future, if given more time to work on this project, we would recommend looking into interaction terms before predictors to determine whether the factors that make a highly scored movie successful are constant across genres. For example, does increasing duration have the same effect on the critic score for action movies that it does on comedy movies? Increasing the level of granularity using interaction terms is an interesting next step for this project.
   
-### Python
+## Python
+## [Python-Optimization](https://github.com/Yichen-Wang-666/Python-Optimization)
+### 1. [Police Patrol Route Optimization](https://github.com/Yichen-Wang-666/Python-Optimization/tree/main/Police%20Patrol%20Route%20Optimization)
+
+
+## [Python-Machine Learning](https://github.com/Yichen-Wang-666/Python-Machine-Learning)
+
 ### Excel

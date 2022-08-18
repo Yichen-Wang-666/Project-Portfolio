@@ -307,7 +307,7 @@ Dataset includes 2.88 million names corresponding to their origin, shown below:
 5. The most probable origin will be returned, example shown below:<br>
 ![image](https://user-images.githubusercontent.com/59845928/185273745-97d50e91-1060-4220-bd20-abfabca14c6a.png)
 
-### Python ML
+### Python_ML
 ### 1. [KickStarter Data Analysis](https://github.com/Yichen-Wang-666/Python-Machine-Learning/tree/main/KickStarter%20Data%20Analysis%20(Classification%20%26%20Clustering%20Model))<br>
 The goals of this project are:
 1. Developed a classification model that predicts whether the variable “state” will take the value “successful” or “failure.” 

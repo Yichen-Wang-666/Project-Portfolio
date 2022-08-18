@@ -406,7 +406,7 @@ If pole fell, given negative rewards; The formula to calculate Q values:<br>
 The plot for the learning process is shown below, with three different reward type:<br>
 ![image](https://user-images.githubusercontent.com/59845928/185332931-92e9540b-70fa-4a0d-a109-bfa49d02b200.png)
   
-#### 4. [Time Series Prediction](https://github.com/Yichen-Wang-666/Python-Machine-Learning/tree/main/Time%20Series%20Prediction%20using%20Tensorflow)<br>
+### 4. [Time Series Prediction](https://github.com/Yichen-Wang-666/Python-Machine-Learning/tree/main/Time%20Series%20Prediction%20using%20Tensorflow)<br>
 ## Code Description
 Time series prediction using datasets from:
 https://storage.googleapis.com/nicksdemobucket/sunspots.csv

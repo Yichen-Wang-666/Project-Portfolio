@@ -406,7 +406,7 @@ If pole fell, given negative rewards; The formula to calculate Q values:<br>
 The plot for the learning process is shown below, with three different reward type:<br>
 ![image](https://user-images.githubusercontent.com/59845928/185332931-92e9540b-70fa-4a0d-a109-bfa49d02b200.png)
   
-### 4. [Time Series Prediction](https://github.com/Yichen-Wang-666/Python-Machine-Learning/tree/main/Time%20Series%20Prediction%20using%20Tensorflow)<br>
+#### 4. [Time Series Prediction](https://github.com/Yichen-Wang-666/Python-Machine-Learning/tree/main/Time%20Series%20Prediction%20using%20Tensorflow)<br>
 ## Code Description
 Time series prediction using datasets from:
 https://storage.googleapis.com/nicksdemobucket/sunspots.csv
@@ -420,5 +420,59 @@ Three different machine learning models are used: RNN seq-to-seq, LSTM and GRU. 
 ![image](https://user-images.githubusercontent.com/59845928/184555858-9a68c986-b7fe-476a-8872-3852a587016f.png)
 
 
-### Excel
+### [Excel](https://github.com/Yichen-Wang-666/Data-Analysis-Excel)
+### 1. [Cargo Case Analysis](https://github.com/Yichen-Wang-666/Data-Analysis-Excel/tree/main/Cargo%20Case%20Analysis)<br>
+(For Detailed Calculation Process, Please see the Excel File. The following questions are some questions selected.)
+#### Case Analysis For the Cargo Problem
+1. determine optimal order quantity, profit of supplier & retailer base on certain wholesale price<br>
+![image](https://user-images.githubusercontent.com/59845928/185334842-6cfbe9c4-664f-4948-ab05-afdc6bc69a79.png)<br>
+![image](https://user-images.githubusercontent.com/59845928/185334886-bbb7d916-7f7f-4702-ae9d-867e1d177318.png)
+
+2. Determine the wholesale price that would yield the highest profit for supplier.
+![image](https://user-images.githubusercontent.com/59845928/185334938-9b3b830e-e53e-4b52-825d-ffe85a27d483.png)
+![image](https://user-images.githubusercontent.com/59845928/185335099-dd750e29-0761-442e-88fb-a44140122432.png)
+
+3. Determine the optimal order quantity if supply chain is centralized (First-Best profit)
+![image](https://user-images.githubusercontent.com/59845928/185335558-5c19a910-ed5a-44e8-b8c5-de15347b8d74.png)<br>
+The retailer’s order quantity from part 1a (964) is lower than the First-Best’s optimal order quantity (1135). This is because the profit margin is much higher in the First-Best’s case since there’re no retailers sharing the profit, so supplier is more willing to supply more quantity as the expected return will be higher.
+
+4. Determine the above quantities if there is a salvage value.<br>
+Wholesale: quantity ordered = 756<br>
+![image](https://user-images.githubusercontent.com/59845928/185335981-1ad7bf33-4c60-4a51-b601-7b7835762883.png)<br>
+First-Best: quantity ordered = 1193<br>
+![image](https://user-images.githubusercontent.com/59845928/185336000-07fbe983-f03a-44d6-8d55-54976fc82879.png)
+![image](https://user-images.githubusercontent.com/59845928/185336018-e3f12854-78c4-4633-8b1e-06d9057d1fd4.png)
+![image](https://user-images.githubusercontent.com/59845928/185336024-f44786ca-32fb-424a-87fb-d85fa969749d.png)
+![image](https://user-images.githubusercontent.com/59845928/185336032-1910be85-38af-46e1-b51f-75e2afa783b1.png)
+
+When there is salvage value, the quantity ordered in wholesale strategy decreases dramatically while that for First-Best strategy increases a bit. However, the total supply chain profit does not change much for both strategies and the profit difference is similar to previous scenario. The reason why the quantity ordered reduced for wholesale strategy is because the profit margin is reduced even further, making the action holding inventory even riskier than before.
+
+### 2. [Freemark Abbey Winery Case Analysis](https://github.com/Yichen-Wang-666/Data-Analysis-Excel/tree/main/Freemark%20Abbey%20Winery%20Case%20Analysis)<br>
+In this case analysis, we use Tree Diagrams to analyse profits for different weather scenarios for the winery company, and giving advice on the optimal action.
+
+#### Scenario background
+For Mr. Jaeger, he chooses to harvest the grapes based on several factors:<br>
+1. weather, whether it rains or not (50%/50%)
+2. if it rains, there's mold or not (40%/60%)
+3. if not rains, sugar level at 25%, 20% or <0.7% acidity (40%/40%/20%)
+4. if no mold, choose to be bottled wine or bulk.
+
+#### Tree Diagram in Excel:<br>
+![image](https://user-images.githubusercontent.com/59845928/185338642-0ddf1b73-9d22-4c36-88dd-870d9fa2dcee.png)<br>
+According to the calculation, Mr.Jaeger should not harvest immediately becausethe EMV of immediate harvest is lower than the later harvest.
+
+How much should Mr. Jaeger be willing to pay to learn whether the storm really will hit the Napa Valley?
+![image](https://user-images.githubusercontent.com/59845928/185339514-ec79e3d7-bf47-49ac-9339-54d28b28f93f.png)
+
+### 3. [Merton Truck Case Analysis](https://github.com/Yichen-Wang-666/Data-Analysis-Excel/tree/main/Merton%20Truck%20Case%20Analysis)<br>
+By looking at the cashflow chart of Merton Truck, shown below<br>
+![image](https://user-images.githubusercontent.com/59845928/185340196-30d3a388-b774-4afe-af22-d82d0b9896c8.png)<br>
+We could use solver in Excel to solve optimization problem. One of the example is:<br>
+![image](https://user-images.githubusercontent.com/59845928/185340867-a399fb46-08ce-441a-a58e-3c23a4dda42f.png)
+By setting up objective function and constraints, we could solve this problem:<br>
+![image](https://user-images.githubusercontent.com/59845928/185341081-ad185b33-339c-4df0-be4c-5bb8d1824d24.png)<br>
+![image](https://user-images.githubusercontent.com/59845928/185341295-a1e474c9-cd71-42ff-bc49-99b38cf545b9.png)
+
+
+
 

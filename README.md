@@ -313,13 +313,45 @@ The goals of this project are:
 1. Developed a classification model that predicts whether the variable “state” will take the value “successful” or “failure.” 
 2. Develop a clustering model to group projects together.
 
-### Data Description
-The dataset in this project is scraped from Kickstarter, which is a popular crowdfunding platform. There are 45 variables in total.<br>
+#### Data Description
+The dataset in this project is scraped from Kickstarter, which is a popular crowdfunding platform. There are 45 variables in total. Variables include **Number of backers**, **Status of the Project** and so on.<br>
+
+#### Classification model
+A classification model is built to predict whether the variable "State" will take the value "successful" or "failure".
+1. **Clean the data**: drop null values and columns with unique values (such as id, which cannot contribute to classification). Other columns with high collinearity will be dropped as well.
+2. **Feature Selection**: for feature selection, **RandomForestClassifier** is used to fit the current data and indicates feature importance. Top 5 features are selected to be predictors.
+
+According to the feature importance provided by the RandomForestClassifier, the goal amount set is the most important factor to the success of the project. It could be deduced that an unreasonable goal may scare away backers, while a good and realistic goal may give backers confidence. Other factors such as “name_len_clean” and ”create_to_launch_days” also contribute a lot, meaning that a clear and intuitive name and a suitable preparation period for the project launch will likely indicates success.
+
+#### Clustering model
+A clustering model is used to group projects together. Before clustering, all features are standardized. The clustering method I used is **KMeans** so a pre-determined number of clusters is required. This could be determined by using the **elbow method**. Since adding another cluster almost always reduce the variance, a number k that improves little should be our target k. In this case, k=5 is a good choice. To test whether the cluster assignment’s performance, the **silhouette method** is used, and the silhouette score is equal to 0.856, much greater than 0.5, meaning it provides good evidence of the reality of the clusters in the data. Results shown below<br>
+  
+![image](https://user-images.githubusercontent.com/59845928/185299229-3f09cd0b-f0e3-4480-814b-a06dd3461778.png)
+We can obtain a lot of insight from these results, especially about how the several features affect the rate of success. Since the data has been normalized, value equals to 0 meaning is among average. For example:<br>
+- For cluster 1, it has an astonishing high value for staff_pick, meaning if the project has been promoted and highlighted on the site, there will be a great chance of achieving success.
+
+### 2. [Salary Prediction from Job Description](https://github.com/Yichen-Wang-666/Python-Machine-Learning/tree/main/Salary%20Prediction%20from%20Job%20Description)<br>
+This assignment involves building and testing classification models to predict salaries from the text contained in the job descriptions. The data for this assignment can be found at http://www.kaggle.com/c/job-salary-prediction.
+
+2500 data points were randomly selected from the training dataset (“Train_rev1.csv”) for ease of analysis. Naïve Bayes classifier models were created to predict high (75th percentile and above) or low (below 75th percentile) salary from the text contained in the job descriptions.
+
+#### Model Construction
+1. For the **Salary** column, the value is normalized to improve training results. And the "high" and "low" standard can be calculated using 75th percentile. 
+2. A new binary attribute is added, 0 meaning lower than the standard, and 1 meaning higher than the standard.
+![image](https://user-images.githubusercontent.com/59845928/185302667-b1116a61-987d-480a-9f91-644d2cd4e83b.png)
+3. Setting up stopwords to choose only nouns and adjectives from tokenized words.
+4. Features are selected from top 2000 most frequent words appeared in the description
+5. The **Naive Bayes Classifier is used to train the model**
 
 
+#### Results
+The confusion matrix is shown below, showing the accuracy of the model (0.784) and a high recall value.<br>
+![image](https://user-images.githubusercontent.com/59845928/185303666-6a511a28-58d8-4ea3-950d-a17eb6cb2cc1.png)<br>
+The top ten words that are most indicative of high/low salary are shown below as well:<br>
+![image](https://user-images.githubusercontent.com/59845928/185304074-734e6db7-e70a-4274-a299-53e9f1a0c17e.png)
+![image](https://user-images.githubusercontent.com/59845928/185304090-c30b9da8-fc32-4771-9534-a045ab84821e.png)
 
 
-### Python_ML
 ### Neural_Network
 
 ### Excel

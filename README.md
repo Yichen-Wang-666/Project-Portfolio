@@ -7,8 +7,13 @@ https://www.linkedin.com/in/yichenwang1114/
 ## Topics (with links to corresponding repositories):
 1. [MySQL dbms](#mysql-dbms)
 2. [R Programming](#r-programming)
-3. [Python](#python)
-4. [Excel](#excel)
+3. [Python](#python)<br>
+    - [Optimization](#optimization)
+    - [Machine Learning](#machine-learning)<br>
+        i. [NLP](#nlp)<br>
+        ii. [Python ML](#python-ml)<br>
+        iii. [Neural Network](#neural-network)<br>
+5. [Excel](#excel)
 
 ## [MySQL dbms](https://github.com/Yichen-Wang-666/MySQL-dbms)
 ### 1. [Bumble Database Simulation](https://github.com/Yichen-Wang-666/MySQL-dbms/tree/main/Bumble%20Database%20Simulation)
@@ -124,7 +129,7 @@ To determine the best degree for each predictor, we decided to apply **ANOVA tes
 In the future, if given more time to work on this project, we would recommend looking into interaction terms before predictors to determine whether the factors that make a highly scored movie successful are constant across genres. For example, does increasing duration have the same effect on the critic score for action movies that it does on comedy movies? Increasing the level of granularity using interaction terms is an interesting next step for this project.
   
 ## Python
-## [Python-Optimization](https://github.com/Yichen-Wang-666/Python-Optimization)
+## [Optimization](https://github.com/Yichen-Wang-666/Python-Optimization)
 ### 1. [Police Patrol Route Optimization](https://github.com/Yichen-Wang-666/Python-Optimization/tree/main/Police%20Patrol%20Route%20Optimization)<br>
 In this project, we set an eye on Toronto, a city that has demonstrated 78 homicides, 373 shootings, and 5,268 breaks and enters in 2021 till December 2nd (Toronto Crime Incidences, 2021), highlighting the necessity of police patrol for crime prevention and improving citizens’ feeling of safety. Based on a simplified simulation of the Toronto police system and public safety conditions, we built a model to minimize the budget spent on police patrolling among divisions in downtown Toronto via optimizing the patrolling routes and determining the number of police cars.
 
@@ -219,10 +224,7 @@ Most of the data will be removed as it is irrelavant to the analysis, all the nu
 ![image](https://user-images.githubusercontent.com/59845928/185248550-1ab3978d-b89c-4811-b032-b691c41673e6.png)
 
 
-## [Python-Machine Learning](https://github.com/Yichen-Wang-666/Python-Machine-Learning)
-1. [NLP](#nlp)
-2. [Python ML](#python_ml)
-3. [Neural Network](#neural_network)
+## [Machine Learning](https://github.com/Yichen-Wang-666/Python-Machine-Learning)
 
 ### NLP
 ### 1. [Airline Customer Experience Analysis](https://github.com/Yichen-Wang-666/Python-Machine-Learning/tree/main/Airline%20Customer%20Experience%20Analysis)<br>
@@ -307,7 +309,7 @@ Dataset includes 2.88 million names corresponding to their origin, shown below:
 5. The most probable origin will be returned, example shown below:<br>
 ![image](https://user-images.githubusercontent.com/59845928/185273745-97d50e91-1060-4220-bd20-abfabca14c6a.png)
 
-### Python_ML
+### Python ML
 ### 1. [KickStarter Data Analysis](https://github.com/Yichen-Wang-666/Python-Machine-Learning/tree/main/KickStarter%20Data%20Analysis%20(Classification%20%26%20Clustering%20Model))<br>
 The goals of this project are:
 1. Developed a classification model that predicts whether the variable “state” will take the value “successful” or “failure.” 
@@ -372,7 +374,7 @@ The clustering using **K Nearest Neighborhood (KNN)**, which is a non-parametric
 A front-end web app is built to simulate the result of the project (https://8potify.netlify.app/), shown below:
 ![image](https://user-images.githubusercontent.com/59845928/185322927-b8c651e0-f9a2-4a35-b003-f01d754770f1.png)
 
-### Neural_Network
+### Neural Network
 ### 1. [CIFAR100 Dataset Classification using AlexNet](https://github.com/Yichen-Wang-666/Python-Machine-Learning/tree/main/CIFAR100%20Dataset%20Classification%20using%20AlexNet)<br>
 An AlexNet Architecture is built and trained on the CIFAR100 dataset. Kernel sizes are resized and the number of kernels are changed because CIFAR100 is a smaller dataset than ImageNet, as well as lower-resolution (32x32 vs 224x224).
 

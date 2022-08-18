@@ -1,6 +1,6 @@
 # Project Portfolio
 #### Yichen Wang
-#### Analytics Consultant at SVDC | Analytics Consultant at Air Transat | McGill University | Master of Management in Analytics(MMA) '22
+#### Academic Data Analyst at SVDC | Academic Data Scientist at Air Transat | McGill University | Master of Management in Analytics(MMA) '22
 https://www.linkedin.com/in/yichenwang1114/
 
 # Table of Content <br>

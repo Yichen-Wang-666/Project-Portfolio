@@ -219,8 +219,107 @@ Most of the data will be removed as it is irrelavant to the analysis, all the nu
 ![image](https://user-images.githubusercontent.com/59845928/185248550-1ab3978d-b89c-4811-b032-b691c41673e6.png)
 
 
-
-
 ## [Python-Machine Learning](https://github.com/Yichen-Wang-666/Python-Machine-Learning)
+1. [NLP](#nlp)
+2. [Python ML](#python_ml)
+3. [Neural Network](#neural_network)
+
+### NLP
+### 1. [Airline Customer Experience Analysis](https://github.com/Yichen-Wang-666/Python-Machine-Learning/tree/main/Airline%20Customer%20Experience%20Analysis)<br>
+In this project, in order to compare airlines in terms of customer experience, we collect and analyze related **user-generated content** (UGCs) rather than trusting polished news articles or advertisements produced by airlines themselves. More specifically, we aim to 
+1. Analyze popular airlines and understand whether people show positive or negative sentiments about each one of them 
+2. providing customized recommendations of airlines to segmented customers based on their preferences by leveraging sentiment analysis and airlines segmentation
+3. providing advice to airlines about which attributes to improve to effectively alleviate customer experience.
+
+#### Revew Scraping:
+All the data is scrapted from two famous airline review websites, namely Consumer Affairs and Skytrax. By scraping reviews from different sources, we reduce the bias on a specific platform and we are able to get the true consumer point of views and generalize our analysis. We focus our analysis on 10 different well-known airlines in the world, shown below:<br>
+![image](https://user-images.githubusercontent.com/59845928/185257099-68b83d0f-2b3c-4542-9188-9b41b760ecaf.png)
+
+#### Pre-processing and word analysis:
+To pre-process the scraped reviews, we did the following two steps:
+1. Tokenizing the reviews by the **nltk** package
+2. Replace confusing tokenized words such as "American","Airlines" into "American_Airlines".<br>
+3. Filter out most frequently mentioned nouns, adjectives and adverbs across all reviews.<br>
+And a word cloud and counting histogram have been generated:<br>
+![image](https://user-images.githubusercontent.com/59845928/185257788-67ed0067-9a5a-4541-9328-7e6753e8a003.png)
+![image](https://user-images.githubusercontent.com/59845928/185257794-2a9b940e-9e4a-4663-ba1e-a314af30727d.png)
+
+Words have been manually grouped into seven major attribute categories, shown below:
+<img src="https://user-images.githubusercontent.com/59845928/185262530-c613b2da-aae6-44c7-9c53-1af7407f509c.png" width="650" height="400"><br> 
+All the word counts have been summarized by a histogram, describing the distribution of all 7 attribute categories.<br>
+![image](https://user-images.githubusercontent.com/59845928/185262723-2abd5f98-5760-4ca8-a071-543926887842.png)
+
+#### Sentiment Analysis
+With the help of vader package that examines both polarity and inensity of emotions reflected by sentences, sentiment scores are generated and a coupound score is calculated. The dataset is transformed into an interactive dashboard shown below:<br>
+![image](https://user-images.githubusercontent.com/59845928/185262872-5030e7bd-2df6-4f3a-b3bc-78af77e38db4.png)
+#### Regression
+By performing regression, we could predict the sentiment score for a particular airline, and investigate the relationship between the sentiment score and its various component. For example, American Airline has a coefficient of -0.1746, meaning reviews mentioning American Airline usually tend to be negative. The detailed results shown below:<br>
+![image](https://user-images.githubusercontent.com/59845928/185263229-885e4d8d-db53-46c0-9aa0-27535fe02480.png)
+
+### 2. [Ice Bucket Challenge Analysis on Twitter](https://github.com/Yichen-Wang-666/Python-Machine-Learning/tree/main/Ice%20Bucket%20Challenge%20Analysis%20on%20Twitter)<br>
+In this project, we will explore what role the social media (Twitter) played during the famous Ice Bucket Challenge campaign in 2014 and how it influenced the trend of this charity movement from two perspectives: 
+1. We will apply methods such as topic modelling and sentiment analysis to investigate the thoughts and attitudes of Twitter users had towards this campaign. By integrating scores generated with time labels, we could come up with detailed trend plots to gain a deeper understanding. 
+2. Network analysis will be used to examine how the ALS association and other influencers/ celebrities contributed to this campaign.
+#### Data Acquisition
+Data scraping is performed over Twitter, both on related tweets and user info of all mentioned users using Twitter Developer API.
+#### Constraints:
+1. All tweets mention **#IceBucketChallenge** are collected, where data ranges from July 2014 to December 2014 since this campaign
+achieved its popularity peak during this period according to the tweet summary statistics.
+2. To reduce the data scraping time cost, we only chose the 1st, 15th and 30th of each month to represent important milestones to reduce dataset size.
+3. There’s a limit of 5000 tweets per day due to the possibility of having an enormous amount of related tweets posted on that day
+
+#### Topic & Sentiment Analysis
+To reveal the popularity change of the campaign on Twitter over time, we first extract the dates of each tweet we collected and then plot the number of postings to visualize the trend<br>. We see that #icebucketchallenge has comparatively high popularity, with #icebucketchallenge embodying a similar trend as the tweets posts’ trend obtained from the previous step. The popularity of #als also increases at the beginning of our observed period but dropped significantly after a month.
+![image](https://user-images.githubusercontent.com/59845928/185265752-c11f1bfd-25fc-429f-9120-d338ea986051.png)
+With the vader package, we calculate the compound sentiment scores for each of the tweets. We classified each tweet’s sentiment into these three categories: positive, neutral and negative. Then, we plot out a line graph denoting the change of sentiment over time.
+![image](https://user-images.githubusercontent.com/59845928/185265999-c10f3360-a3f3-48ec-a4cb-28163c4c87b5.png)
+
+#### Topic Modelling
+To further extract the hidden structure behind this collection of tweets, we used the Latent Dirichlet Allocation model (referred to as LDA). Given the number of documents and number of words, we determined the number of topics and ran the model. The output includes both the distribution of words for each topic and the distribution of topics for each document. In our case, each document refers to a tweet post. Utilizing Python packages such as **gensim, nltk, pprint, pyLDAvis and pickle**, as well as a for loop on the number of topics, we were able to find the optimal number of topics and generate a dashboard for our topic modelling result, shown as below:
+![image](https://user-images.githubusercontent.com/59845928/185268717-68361306-4bdf-4d90-90bb-67b6d9124d99.png)
+For Sub-topic analysis, the number of users mentioned of tweets under different topics is shown as well:<br>
+![image](https://user-images.githubusercontent.com/59845928/185269921-36540332-7400-4acb-9374-6211fe7d16c5.png)
+
+#### Network Analysis
+To better understand the results, we created a visualization for networks of the top 10 influencers that we identified in the ice bucket challenge, using the Pyvis library. According to the network visualization shown below, the big circular cluster is the network of youtube. As a popular media platform, YouTube was mentioned the most when users posted tweets regarding the ice bucket challenge, and thus had the largest network. This is reasonable because many people are either watching or posting ice bucket challenge videos on YouTube.
+<img src="https://user-images.githubusercontent.com/59845928/185270110-5d9834da-bc4b-4906-9f3a-597b7eb353b3.png" width="650" height="500"><br> 
+
+#### Recommendation:
+![image](https://user-images.githubusercontent.com/59845928/185270188-39b9942b-85eb-4857-8d7b-aba0d2ca79f7.png)
+
+### 3. [Name Origin Classification using Character-level RNN](https://github.com/Yichen-Wang-666/Python-Machine-Learning/tree/main/Name%20Origin%20Classification%20using%20Character-level%20RNN)<br>
+An rnn-based model is developed to perform classification. The goal is threefold:
+
+1. Preprocessing procedures required for performing text classification from A to Z.
+2. Use embeddings and RNNs in conjunction at the character level to perform classification.
+3. Write a function that takes as input a string, and outputs the name of the predicted class.
+
+#### Dataset
+Dataset includes 2.88 million names corresponding to their origin, shown below:
+![image](https://user-images.githubusercontent.com/59845928/185271027-83383886-8924-4936-8fab-6681be32f85b.png)
+#### Modelling:
+1. Map the corresponding origins into one-hot vectors, so could be fitted for classification.
+2. Use the Keras tokenizer at the character level tokenize the name input into integar sequences.
+![image](https://user-images.githubusercontent.com/59845928/185273583-bf17f729-7ed3-4adc-b25b-0a45407e759f.png)
+3. Pad the sequences using the Keras preprocessing tools.
+4. Train the Sequential RNN model
+![image](https://user-images.githubusercontent.com/59845928/185273632-9da551b3-f4d4-4352-b425-3a8e3bfcd07b.png)
+5. The most probable origin will be returned, example shown below:<br>
+![image](https://user-images.githubusercontent.com/59845928/185273745-97d50e91-1060-4220-bd20-abfabca14c6a.png)
+
+### Python ML
+### 1. [KickStarter Data Analysis](https://github.com/Yichen-Wang-666/Python-Machine-Learning/tree/main/KickStarter%20Data%20Analysis%20(Classification%20%26%20Clustering%20Model))<br>
+The goals of this project are:
+1. Developed a classification model that predicts whether the variable “state” will take the value “successful” or “failure.” 
+2. Develop a clustering model to group projects together.
+
+### Data Description
+The dataset in this project is scraped from Kickstarter, which is a popular crowdfunding platform. There are 45 variables in total.<br>
+
+
+
+
+### Python_ML
+### Neural_Network
 
 ### Excel

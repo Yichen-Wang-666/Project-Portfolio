@@ -351,7 +351,74 @@ The top ten words that are most indicative of high/low salary are shown below as
 ![image](https://user-images.githubusercontent.com/59845928/185304074-734e6db7-e70a-4274-a299-53e9f1a0c17e.png)
 ![image](https://user-images.githubusercontent.com/59845928/185304090-c30b9da8-fc32-4771-9534-a045ab84821e.png)
 
+### 3. [Spotify Analysis](https://github.com/Yichen-Wang-666/Python-Machine-Learning/tree/main/Spotify%20Analysis)<br>
+Improve functionality of Spotify by adding "Mystery Box", which allow users to choose the number of songs desired, genre & mood, and mood level. A playlist will generated according to the parameters entered.
+  
+#### Dataset
+This project is conducted using Spotify dataset on Kaggle. We also build a front-end web app of our project, to use it, please refer to this URL (https://8potify.netlify.app/). Variables include numerical ones such as **Acousticness (ranges from 0 to 1)**, **tempo (ranges from 50 to 200)**, and so on. Categorical variables include **key**, **artists**, and so on.
+
+#### Clustering model
+Each song has been clustered into one cluster and given a gnere, the graph is shown below:<br>
+![image](https://user-images.githubusercontent.com/59845928/185318927-9ac615d4-f2a8-42b1-9a23-f7b42d40eba5.png)
+
+The clustering using **K Nearest Neighborhood (KNN)**, which is a non-parametric learning method. KNN will calculate the distance between the target song and every other song in its database.
+
+#### New Features
+3 new features are added, which mainly result in certain filters available.<br>
+1. **By Song**: Users can enter a song title, the artists of the song, and the number of recommended songs they want. The algorithm will generate a list of recommended songs based on the inputed song.
+2. **By mood**: we create a list of moods based on the music features. For example, enegy will be energetic and danceability will be willing to dance. Users can enter the mood, select the percentage of mood and number of recommenations. A sample entry will be: want to dance, 70%, 5 songs. The algorithm will then generate 5 songs based on the song that is the nearest to the 70% quantile of danceability attribute.
+
+#### Demo
+A front-end web app is built to simulate the result of the project (https://8potify.netlify.app/), shown below:
+![image](https://user-images.githubusercontent.com/59845928/185322927-b8c651e0-f9a2-4a35-b003-f01d754770f1.png)
 
 ### Neural_Network
+### 1. [CIFAR100 Dataset Classification using AlexNet](https://github.com/Yichen-Wang-666/Python-Machine-Learning/tree/main/CIFAR100%20Dataset%20Classification%20using%20AlexNet)<br>
+An AlexNet Architecture is built and trained on the CIFAR100 dataset. Kernel sizes are resized and the number of kernels are changed because CIFAR100 is a smaller dataset than ImageNet, as well as lower-resolution (32x32 vs 224x224).
+
+#### 1. Preprocessing
+The primary preprocessing transformations that will be imposed on the data presented to the network are: Normalizing and standardizing the images. Resizing of the images from 32x32 to 227x227. The AlexNet network input expects a 227x227 image.<br>
+#### 2. Pipeline
+Implement mapping, shuffle and batching at size of 32.
+#### 3. Model Implementation
+![image](https://user-images.githubusercontent.com/59845928/185326534-f5d3864b-8b32-4868-8106-8b393c0eb30e.png)<br>
+
+For evaluation, the result is shown below:
+![image](https://user-images.githubusercontent.com/59845928/185327040-f6d3ac75-7821-4831-bd14-b53c01632999.png)
+
+### 2. [MNIST Autoencoder](https://github.com/Yichen-Wang-666/Python-Machine-Learning/tree/main/MNIST%20Autoencoder)<br>
+Autoencoders using the funcitonal API are create with the following topology:<br>
+1. Stacked 784 - 392 - 196 - 392 - 784 (tied weights or not)
+2. Convolutional Encoder (conv, maxpool, conv, maxpool, conv, maxpool). Decoder (conv, upsample2d, conv, upsample2d, conv, upsample2d, conv)
+![image](https://user-images.githubusercontent.com/59845928/185329195-c1abbe45-ada6-401d-8d91-db50195a3d94.png)
+
+The result is shown below:
+![image](https://user-images.githubusercontent.com/59845928/185329430-efda0c9b-170e-4df6-86ef-a73a775aea73.png)
+
+### 3. [Reinforcement Learning (CartPole-v0)](https://github.com/Yichen-Wang-666/Python-Machine-Learning/tree/main/Reinforcement%20Learning%20(CartPole-v0))<br>
+1. Setting up initialization (Learning-rate, discount, runs)
+2. Exploration settings (epsilon, decay value)
+3. Create bins and Q tables to store every state
+
+If pole fell, given negative rewards; The formula to calculate Q values:<br>
+![image](https://user-images.githubusercontent.com/59845928/185332458-d0e0d2aa-86ba-4905-a483-bd24c8b14330.png)
+
+The plot for the learning process is shown below, with three different reward type:<br>
+![image](https://user-images.githubusercontent.com/59845928/185332931-92e9540b-70fa-4a0d-a109-bfa49d02b200.png)
+  
+### 4. [Time Series Prediction](https://github.com/Yichen-Wang-666/Python-Machine-Learning/tree/main/Time%20Series%20Prediction%20using%20Tensorflow)<br>
+## Code Description
+Time series prediction using datasets from:
+https://storage.googleapis.com/nicksdemobucket/sunspots.csv
+
+Three different machine learning models are used: RNN seq-to-seq, LSTM and GRU. Results are shown below:
+#### RNN SEQ-TO-SEQ:
+![image](https://user-images.githubusercontent.com/59845928/184555841-f8013ff9-611e-4d0e-9ff7-006b248af370.png)
+#### LSTM:
+![image](https://user-images.githubusercontent.com/59845928/184555849-3a2eaa60-4747-441c-981f-3094aa49f5e7.png)
+#### GRU:
+![image](https://user-images.githubusercontent.com/59845928/184555858-9a68c986-b7fe-476a-8872-3852a587016f.png)
+
 
 ### Excel
+

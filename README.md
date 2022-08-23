@@ -1,11 +1,11 @@
 # Project Portfolio
 #### Yichen Wang
-#### Academic Data Analyst at SVDC | Academic Data Scientist at Air Transat | McGill University | Master of Management in Analytics(MMA) '22
+#### Data Analyst at SVDC (Academic)| Data Scientist at Air Transat (Academic)| McGill University | Master of Management in Analytics(MMA) '22
 https://www.linkedin.com/in/yichenwang1114/
 
 # Table of Content <br>
 ## Topics (with links to corresponding repositories):
-1. [MySQL dbms](#mysql-dbms)
+1. [MySQL dbms with Visualization](#mysql-dbms-with-visualization)
 2. [R Programming](#r-programming)
 3. [Python](#python)<br>
     - [Optimization](#optimization)
@@ -15,8 +15,32 @@ https://www.linkedin.com/in/yichenwang1114/
         iii. [Neural Network](#neural-network)<br>
 5. [Excel](#excel)
 
-## [MySQL dbms](https://github.com/Yichen-Wang-666/MySQL-dbms)
-### 1. [Bumble Database Simulation](https://github.com/Yichen-Wang-666/MySQL-dbms/tree/main/Bumble%20Database%20Simulation)
+## [MySQL dbms With Visualization](https://github.com/Yichen-Wang-666/MySQL-dbms-w-visualization)
+### 1. [Sales Analysis with SQL & Tableau](https://github.com/Yichen-Wang-666/MySQL-dbms-w-Visualization/tree/main/Sales%20Analysis%20with%20SQL%20%26%20Tableau)
+#### Project Description:
+1. **Create tables and ERD** shown below based on a sample database (https://www.db-fiddle.com/f/eFE3c17RDHaQ1gzqDrqwYJ/0)<br>
+<img src="https://user-images.githubusercontent.com/59845928/186084778-cd71bf22-fb89-4278-8101-4ce4c7a5ef31.png" width="500" height="400"><br>
+
+2. **Write SQL commands to explore the database and find out important KPIs for the dashboard**.<br>
+e.g. Write an SQL query to list customer name, customer number, total amount payable and credit limit for all the customers who have an amount payable greater than their credit limit.<br>
+<img src="https://user-images.githubusercontent.com/59845928/186090117-66ee8190-c58c-4f2e-9f20-16647c6553be.png" width="500" height="250"><br>
+
+3. **Identify important KPIs:** 
+  - Global Revenue Distribution<br>
+  <img src="https://user-images.githubusercontent.com/59845928/186090548-1726a2e2-0781-463d-b2ad-50fc7fc96d11.png" width="600" height="300"><br>
+  - Monthly Revenue<br>
+  <img src="https://user-images.githubusercontent.com/59845928/186090278-dc5cdf45-9fb1-459a-b6a6-bb844c9fece3.png" width="600" height="200"><br>
+  - Production Line Sales<br>
+  <img src="https://user-images.githubusercontent.com/59845928/186090329-3153c89d-4c9f-4364-b465-c6bd958a9fc4.png" width="600" height="250"><br>
+  - Best Seller<br>
+  <img src="https://user-images.githubusercontent.com/59845928/186090424-bcc2d051-3306-4b62-911f-e0e6d93c69cd.png" width="600" height="200"><br>
+
+4. **Construct interactive dashboards with Tableau to visualize the data** (link below)<br>
+https://public.tableau.com/app/profile/yichen.wang3217/viz/SalesDashboard_16612350048200/Dashboard1?publish=yes<br>
+![image](https://user-images.githubusercontent.com/59845928/186085340-cc66538a-b724-404b-9be9-a1eb7542ccdd.png)
+
+
+### 2. [Bumble Database Simulation](https://github.com/Yichen-Wang-666/MySQL-dbms-w-visualization/tree/main/Bumble%20Database%20Simulation)
 A dating app database is inspired by the functionality of Bumble, a free dating app that rapidly got popular recently. We aim to build a **subscription-based model database** that enables us to create value from the data, i.e. to perform:
 - user targeting/user analytics
 - financial metrics
@@ -33,7 +57,7 @@ _Example Query:_<Br>
 
 For more details, please visit Bumble Database Simulation Folder to see the report and files.
   
-### 2. [La Ronde Analysis](https://github.com/Yichen-Wang-666/MySQL-dbms/tree/main/La%20Ronde%20Analysis)
+### 3. [La Ronde Analysis](https://github.com/Yichen-Wang-666/MySQL-dbms-w-visualization/tree/main/La%20Ronde%20Analysis)
 Several datasets including the ride history, ticket, customer, facility and so on of La Ronde, one of the famous amusement part in Montreal, are provided. This project aims to create a database to store all the datasets and come up with different queries to exploit values from the massive amount of data.
 
 **The ERD of the database is shown below**<br>
